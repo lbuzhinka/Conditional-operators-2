@@ -21,12 +21,9 @@ public class Main {
         }
         System.out.println("\nTask 3");
         int year = 2021;
-        boolean ifTheYearIsALeap = (year % 4 == 0 || year % 400 == 0) && year % 100 != 0;
-        boolean ifTheYearIsNotALeap = year % 4 != 0 || year % 400 != 0 || year % 100 == 0;
-        if (year >= 1584 &&  ifTheYearIsALeap) {
-                System.out.println(year + " год является високосным");
-            }
-        else if ( year < 1584 || ifTheYearIsNotALeap) {
+        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            System.out.println(year + " год является високосным");
+        } else {
             System.out.println(year + " год не является високосным");
         }
         System.out.println("\nTask 4");
